@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      站台公開但不收錄（莎拉裁示，2026-11-02）。public/robots.txt 擋的是「爬」，
+      這一行擋的是「收錄」—— 擋的不是同一件事，所以兩個都要。
+    -->
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Sengoku Atlas</title>
+    <script type="module" crossorigin src="./assets/index-vmYnKihP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bbkfheg2.css">
+  </head>
+  <body>
+    <nav id="views" class="views"></nav>
+    <div id="caption" class="caption"></div>
+    <!-- 側欄是 #map 的兄弟而不是子節點：面板裡的點擊與滾輪就不會傳進 Leaflet -->
+    <div class="stage">
+      <div id="map"></div>
+      <aside id="sidebar" class="sidebar" hidden></aside>
+    </div>
+    <div id="table" class="table" hidden></div>
+    <div id="sources" class="sources" hidden></div>
+    <div id="timeline" class="timeline"></div>
+  </body>
+</html>
