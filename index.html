@@ -9,19 +9,24 @@
     -->
     <meta name="robots" content="noindex, nofollow" />
     <title>Sengoku Atlas</title>
-    <script type="module" crossorigin src="./assets/index-vmYnKihP.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bbkfheg2.css">
+    <script type="module" crossorigin src="./assets/index-BrgUggMj.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-g3C0mgkE.css">
   </head>
   <body>
     <nav id="views" class="views"></nav>
     <div id="caption" class="caption"></div>
-    <!-- 側欄是 #map 的兄弟而不是子節點：面板裡的點擊與滾輪就不會傳進 Leaflet -->
+    <!--
+      兩個側欄都是 #map 的兄弟而不是子節點：面板裡的點擊與滾輪就不會傳進 Leaflet。
+      圖例在左、常駐，而且**在 flex flow 裡**，所以它把地圖推窄而不是蓋住地圖
+      （莎拉裁示 2026-11-07）。國的側欄在右、絕對定位，只有選取時才出現。
+    -->
     <div class="stage">
+      <aside id="legend" class="legend"></aside>
       <div id="map"></div>
       <aside id="sidebar" class="sidebar" hidden></aside>
     </div>
     <div id="table" class="table" hidden></div>
     <div id="sources" class="sources" hidden></div>
-    <div id="timeline" class="timeline"></div>
+    <div id="timeline" class="timeline"></div>
   </body>
 </html>
